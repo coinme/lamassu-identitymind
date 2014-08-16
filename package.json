@@ -20,6 +20,6 @@
     "url": "https://github.com/lamassu/lamassu-idology/issues"
   },
   "dependencies": {
-    "nipple": "~2.5.5"
+    "wreck": "3.x.x"
   }
 }
