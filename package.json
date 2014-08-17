@@ -4,7 +4,8 @@
   "description": "An ID verification plugin for lamassu-server",
   "main": "lib/main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "node setup.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,8 @@
     "url": "https://github.com/lamassu/lamassu-idology/issues"
   },
   "dependencies": {
-    "wreck": "3.x.x"
+    "wreck": "x.x.x",
+    "promptly": "~0.2.0",
+    "lamassu-config": "~0.4.1"
   }
 }
