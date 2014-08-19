@@ -9,16 +9,18 @@ console.log('\nSetting up the IdentityMind plugin.\n');
 console.log('Please enter your API credentials.\n');
 promptly.prompt('Username: ', function(userErr, username) {
   promptly.password('Password: ', function(passErr, password) {
-    promptly.confirm('Test mode? [n]:' , {default: false}, function(testErr, test) {
-      updateDb(username, password, test, function(err) {
-        if (err) throw err;
-        console.log('\nSuccess.');
+    promptly.prompt('Hashing Salt (provided by identity mind): ', function(saltErr, salt) {
+      promptly.confirm('Staging mode? [n]:' , {default: false}, function(testErr, test) {
+        updateDb(username, password, salt, test, function(err) {
+          if (err) throw err;
+          console.log('\nSuccess.');
+        });
       });
     });
   });
 });
 
-function updateDb(username, password, test, callback) {
+function updateDb(username, password, salt, test, callback) {
   var host = test ? 'staging.identitymind.com' : 'edna.identitymind.com';
   var newConfig = {
     exchanges: {
@@ -32,7 +34,8 @@ function updateDb(username, password, test, callback) {
           identitymind: {
             username: username,
             password: password,
-            host: host
+            host: host,
+            salt: salt
           }
         }
       }
