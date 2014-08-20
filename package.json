@@ -1,6 +1,6 @@
 {
   "name": "lamassu-identitymind",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An ID verification plugin for lamassu-server",
   "main": "lib/main.js",
   "scripts": {
