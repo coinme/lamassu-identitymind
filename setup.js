@@ -26,6 +26,7 @@ function updateDb(username, password, salt, test, callback) {
     exchanges: {
       settings: {
         compliance: {
+          idVerificationEnabled: true,
           idVerificationLimit: 0
         }
       },
