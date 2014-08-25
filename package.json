@@ -23,6 +23,6 @@
   "dependencies": {
     "wreck": "~3.0.0",
     "promptly": "~0.2.0",
-    "lamassu-config": "~0.4.1"
+    "lamassu-config": "~1.0.0"
   }
 }
