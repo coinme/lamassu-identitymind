@@ -38,9 +38,9 @@ function updateDb(username, password, salt, test, callback) {
             host: host,
             salt: salt
           }
-        }
+        },
         current: {
-          idVerifier: identitymind
+          idVerifier: 'identitymind'
         }
       }
     }
