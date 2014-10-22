@@ -39,6 +39,9 @@ function updateDb(username, password, salt, test, callback) {
             salt: salt
           }
         }
+        current: {
+          idVerifier: identitymind
+        }
       }
     }
   };
