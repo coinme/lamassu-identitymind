@@ -21,8 +21,9 @@
     "url": "https://github.com/lamassu/lamassu-idology/issues"
   },
   "dependencies": {
-    "wreck": "~3.0.0",
+    "lamassu-config": "~1.0.0",
     "promptly": "~0.2.0",
-    "lamassu-config": "~1.0.0"
+    "ramda": "^0.8.0",
+    "wreck": "~3.0.0"
   }
 }
